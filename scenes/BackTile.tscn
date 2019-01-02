@@ -1,0 +1,126 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/BackTile.gd" type="Script" id=1]
+[ext_resource path="res://tiles/tile1_back.png" type="Texture" id=2]
+[ext_resource path="res://tiles/tile2_back.png" type="Texture" id=3]
+[ext_resource path="res://tiles/tile3_back.png" type="Texture" id=4]
+[ext_resource path="res://tiles/tile4_back.png" type="Texture" id=5]
+[ext_resource path="res://tiles/tile5_back.png" type="Texture" id=6]
+[ext_resource path="res://tiles/tile6_back.png" type="Texture" id=7]
+[ext_resource path="res://tiles/tile7_back.png" type="Texture" id=8]
+[ext_resource path="res://tiles/tile8_back.png" type="Texture" id=9]
+[ext_resource path="res://tiles/tile9_back.png" type="Texture" id=10]
+[ext_resource path="res://tiles/tile10_back.png" type="Texture" id=11]
+[ext_resource path="res://tiles/tile11_back.png" type="Texture" id=12]
+[ext_resource path="res://tiles/tile12_back.png" type="Texture" id=13]
+[ext_resource path="res://tiles/tile13.png" type="Texture" id=14]
+
+[node name="BackTile" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 3 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Sprite3" type="Sprite" parent="." index="2"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 4 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Sprite4" type="Sprite" parent="." index="3"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 5 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite5" type="Sprite" parent="." index="4"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 6 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite6" type="Sprite" parent="." index="5"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 7 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite7" type="Sprite" parent="." index="6"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite8" type="Sprite" parent="." index="7"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 9 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite9" type="Sprite" parent="." index="8"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 10 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite10" type="Sprite" parent="." index="9"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 11 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Sprite11" type="Sprite" parent="." index="10"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 12 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite12" type="Sprite" parent="." index="11"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 13 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite13" type="Sprite" parent="." index="12"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+
