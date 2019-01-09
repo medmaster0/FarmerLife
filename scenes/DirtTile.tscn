@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/DirtTile.gd" type="Script" id=1]
+[ext_resource path="res://tiles/blank.png" type="Texture" id=2]
+[ext_resource path="res://tiles/tile0_type1.png" type="Texture" id=3]
+[ext_resource path="res://tiles/tile0_type2.png" type="Texture" id=4]
+[ext_resource path="res://tiles/tile0_type3.png" type="Texture" id=5]
+
+[node name="DirtTile" type="Node2D"]
+
+z_index = -2
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="DirtSprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="Gravel1" type="Sprite" parent="." index="1"]
+
+visible = false
+texture = ExtResource( 3 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="Gravel2" type="Sprite" parent="." index="2"]
+
+visible = false
+texture = ExtResource( 4 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="Gravel3" type="Sprite" parent="." index="3"]
+
+visible = false
+texture = ExtResource( 5 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+

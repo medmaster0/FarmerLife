@@ -14,6 +14,10 @@ config/name="Farmer Life"
 run/main_scene="res://FarmerGame.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+MedAlgo="*res://scripts/MedAlgo.gd"
+
 [importer_defaults]
 
 texture={
@@ -37,4 +41,5 @@ texture={
 
 [rendering]
 
+quality/subsurface_scattering/scale=1
 environment/default_environment="res://default_env.tres"
