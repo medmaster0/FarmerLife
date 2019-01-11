@@ -42,3 +42,26 @@ func _ready():
 func change_color(color1, color2):
 	$Prim.get_child(tile_index).modulate = color1
 	$Seco.get_child(tile_index).modulate = color2
+
+#Function to handle changing of tile types
+#switches on and off the proper sprites
+func change_tile(tile_type):
+	
+	#Preserve colors
+	#if $Prim.get_child(tile_index).modulate() != null:
+	var prim_col = $Prim.get_child(tile_index).modulate
+	#if $Seco.get_child(tile_index).modulate() != null:
+	var seco_col = $Seco.get_child(tile_index).modulate
+	
+	#First turn off the old sprites...
+	$Prim.get_child(tile_index).visible = false
+	$Seco.get_child(tile_index).visible = false
+	
+	#Turn on the new ones
+	tile_index = tile_type
+	$Prim.get_child(tile_index).visible = true
+	$Seco.get_child(tile_index).visible = true
+	
+	#Change the colors on new sprites
+	$Prim.get_child(tile_index).modulate = prim_col
+	$Seco.get_child(tile_index).modulate = seco_col

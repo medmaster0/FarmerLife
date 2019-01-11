@@ -13,8 +13,6 @@ var dirt_colors = [Color(0.77, 0.61, 0.55), Color(0.72, 0.5333, 0.44), Color(0.7
 #(Start with three random shades of red)
 #The first brown has a r-g difference and a g-b difference
 #These are constant accross each brown
-
-
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -22,6 +20,11 @@ func _ready():
 	
 	#Choose a random dirt color
 	var dirt_color = dirt_colors[ randi() % dirt_colors.size() ]
+	#var dirt_color = MedAlgo.generate_skin_color()
+	#^^^^^^ SKIN COLOR looks good for skin but not for dirt....
+	#^^^^TODO: but still wanna generate dirt colors somehow one day...
+	# The skin color a good start, but needs more Land of Enchantment reds swirled in there :)))
+	# TODO: add red shade to skin color -> dirt_color = skin_color + red_shade
 	$DirtSprite.modulate = dirt_color
 	
 	#Decide if we want gravel

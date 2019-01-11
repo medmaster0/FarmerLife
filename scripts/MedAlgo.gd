@@ -128,6 +128,7 @@ func colorTransitionStep(color1,color2):
 #
 #Also need a tile map that you search on
 #
+#RETURNS MAP COORDS!
 #How it works:
 #We have two sets, open and closed set
 func find_path(global_start, global_end, tile_map):
@@ -301,11 +302,11 @@ func isVectorInSet(search_coords, search_set):
 	
 
 
-
 #GENERAL FLOOD SEARCH
 #POSSIBLY GENERAL USE??? LETS SEE ONCE IMPLEMENTED SINCE IM WRITING THIS BEFORE
 #This is a flood search
 #Creates a list of nodes
+#RETURNS MAP COORDS!
 #Nodes have form: (position, distance from target)
 func find_tile(global_start, target_tile, tile_map):
 	print("him momo")
@@ -398,6 +399,30 @@ func find_tile(global_start, target_tile, tile_map):
 	return(return_path)
 
 
+#A function for generating a zigzag pattern path...
+#Start at left corner
+#go right for the row_duration
+#move on to step below and go back along row
+#Input/Output in map coords!
+func zig_zag_path(start, row_duration, num_rows):
+	var path = [] #the path we return
+	var direction = 1 #start of going in positive direction (1), then go backwards (-1)
+	
+	var ref_pos = start 
+	for j in range(num_rows):
+		#Go along row
+		for i in range(row_duration):
+			var temp_position = Vector2(ref_pos.x + (direction*i), ref_pos.y)
+			path.append(temp_position)
+		#When finished with row, move on to next one
+		#Do this by placing ref_pos at the start of the next row where we left off (alternating sides)
+		ref_pos.y = ref_pos.y + 1
+		ref_pos.x = ref_pos.x + (direction*(row_duration-1))
+		#Then also change direction for next row...
+		direction = direction * -1
+	
+	return(path)
+	
 
 #generate a shade of golden yellow (for the perfume gold topper thingy)
 #kinda green and (antiquey) -> shitty for hair and stuff
