@@ -35,10 +35,45 @@ _sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
 [node name="Creature" parent="." index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 240, 112 )
+position = Vector2( 288, 176 )
 
 [node name="Creature2" parent="." index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 240, 144 )
+position = Vector2( 416, 176 )
+
+[node name="TaskTimer2" type="Timer" parent="Creature2" index="2"]
+
+process_mode = 1
+wait_time = 7.0
+one_shot = true
+autostart = true
+
+[node name="Creature3" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 496, 176 )
+
+[node name="TaskTimer3" type="Timer" parent="Creature3" index="2"]
+
+process_mode = 1
+wait_time = 14.0
+one_shot = true
+autostart = true
+
+[node name="Creature4" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 576, 176 )
+
+[node name="TaskTimer4" type="Timer" parent="Creature4" index="2"]
+
+process_mode = 1
+wait_time = 21.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Creature2/TaskTimer2" to="." method="_on_TaskTimer2_timeout"]
+
+[connection signal="timeout" from="Creature3/TaskTimer3" to="." method="_on_TaskTimer3_timeout"]
+
+[connection signal="timeout" from="Creature4/TaskTimer4" to="." method="_on_TaskTimer4_timeout"]
 
 

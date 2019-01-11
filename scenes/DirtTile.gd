@@ -39,6 +39,22 @@ func _ready():
 				$Gravel2.visible = true
 			2:
 				$Gravel3.visible = true
+		
+		#If there was gravel... Also posibly rotate the square...
+		var rotate_choice = randi()%4
+		match(rotate_choice):
+			0:
+				rotation = 0
+			1:
+				rotation = PI/2
+				position.x = position.x + 16
+			2:
+				rotation = PI
+				position.y = position.y + 16
+				position.x = position.x + 16
+			3:
+				rotation = -PI/2
+				position.y = position.y + 16
 	
 	pass
 

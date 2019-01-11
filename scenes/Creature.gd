@@ -1,8 +1,13 @@
 extends Node2D
 
 export (PackedScene) var Tool
+export (PackedScene) var DirtTile
+export (PackedScene) var FarmTile
 
 onready var map = get_parent().find_node("TileMap")
+#Farming onreadies
+onready var map_tiles = get_parent().map_tiles
+var map_width #need a key to the map_tiles...
 
 #Movement stuff
 var step_tick = 0.5 #time period for each step
@@ -37,6 +42,9 @@ func _ready():
 	
 	#Change job type
 	change_job_type(0)
+	
+	#MAP BULLSHIT>...
+	map_width = int(map.world_to_map(Vector2(get_viewport().size.x,0)).x)
 	
 	pass
 
@@ -80,6 +88,52 @@ func path_step():
 #to the encompassing game and then into the map_tiles and stuff... oh boy....
 func farm_path_step():
 	
+	#Change the underlying tile, (then work on stepping)
+	var map_coords = map.world_to_map(position)
+	print(map_coords)
+	#What happens to the tile dpends on creature job type...
+	match(job_id):
+		0:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(0)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+		1:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(1)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+		2:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(2)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+		3:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(3)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+	
 	if path.size() == 0:
 		return(true) #Do nothing since there are no more steps left
 	
@@ -93,6 +147,7 @@ func farm_path_step():
 	
 	#Move the Creature there (remember to convert to world coords from map)
 	position = map.map_to_world(next_coords)
+	
 	
 	return(false)
 
@@ -135,6 +190,24 @@ func change_job_type(type):
 			var new_tool = Tool.instance()
 			add_child(new_tool)
 			new_tool.change_tile(1)
+			personal_tool = new_tool
+		1:
+			#Plough
+			var new_tool = Tool.instance()
+			add_child(new_tool)
+			new_tool.change_tile(1)
+			personal_tool = new_tool
+		2:
+			#Plough
+			var new_tool = Tool.instance()
+			add_child(new_tool)
+			new_tool.change_tile(1)
+			personal_tool = new_tool
+		3:
+			#Seed Bag
+			var new_tool = Tool.instance()
+			add_child(new_tool)
+			new_tool.change_tile(6)
 			personal_tool = new_tool
 	
 	print(type)

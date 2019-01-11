@@ -80,14 +80,38 @@ func _ready():
 	#$Creature.flip_sprites()
 	#print($Creature.personal_tool.position)
 	
+	#Set up creatures....
+	$Creature.change_job_type(0)
+	$Creature2.change_job_type(1)
+	$Creature3.change_job_type(2)
+	$Creature4.change_job_type(3)
+	
 	$Creature.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
 	#$Creature.flip_sprites()
-	print($Creature.path)
 	
 	pass
+
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #
 #	pass
+
+
+
+func _on_TaskTimer2_timeout():
+	#After the time, start the second creature...
+	$Creature2.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
+	pass # replace with function body
+
+
+func _on_TaskTimer3_timeout():
+	#After the time, start the second creature...
+	$Creature3.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
+	pass # replace with function body
+	
+func _on_TaskTimer4_timeout():
+	#After the time, start the second creature...
+	$Creature4.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
+	pass # replace with function body

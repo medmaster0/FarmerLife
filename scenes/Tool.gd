@@ -12,6 +12,7 @@ var tile_index
 # 3 - SCYTHE
 # 4 - SHOVEL
 # 5 - WHEELBARROW
+# 6 - SEEDBAG
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
