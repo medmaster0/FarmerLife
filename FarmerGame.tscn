@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/DirtTile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Creature.tscn" type="PackedScene" id=4]
 
-[node name="FarmerGame" type="Node" index="0"]
+[node name="FarmerGame" type="Node"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -70,10 +70,75 @@ wait_time = 21.0
 one_shot = true
 autostart = true
 
+[node name="Creature5" parent="." index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 448, 224 )
+
+[node name="TaskTimer5" type="Timer" parent="Creature5" index="2"]
+
+process_mode = 1
+wait_time = 28.0
+one_shot = true
+autostart = true
+
+[node name="Creature6" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 544, 224 )
+
+[node name="TaskTimer6" type="Timer" parent="Creature6" index="2"]
+
+process_mode = 1
+wait_time = 35.0
+one_shot = true
+autostart = true
+
+[node name="Creature7" parent="." index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 448, 320 )
+
+[node name="TaskTimer7" type="Timer" parent="Creature7" index="2"]
+
+process_mode = 1
+wait_time = 42.0
+one_shot = true
+autostart = true
+
+[node name="Creature8" parent="." index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 544, 288 )
+
+[node name="TaskTimer8" type="Timer" parent="Creature8" index="2"]
+
+process_mode = 1
+wait_time = 49.0
+one_shot = true
+autostart = true
+
+[node name="Creature9" parent="." index="9" instance=ExtResource( 4 )]
+
+position = Vector2( 640, 240 )
+
+[node name="TaskTimer9" type="Timer" parent="Creature9" index="2"]
+
+process_mode = 1
+wait_time = 56.0
+one_shot = true
+autostart = true
+
 [connection signal="timeout" from="Creature2/TaskTimer2" to="." method="_on_TaskTimer2_timeout"]
 
 [connection signal="timeout" from="Creature3/TaskTimer3" to="." method="_on_TaskTimer3_timeout"]
 
 [connection signal="timeout" from="Creature4/TaskTimer4" to="." method="_on_TaskTimer4_timeout"]
+
+[connection signal="timeout" from="Creature5/TaskTimer5" to="." method="_on_TaskTimer5_timeout"]
+
+[connection signal="timeout" from="Creature6/TaskTimer6" to="." method="_on_TaskTimer6_timeout"]
+
+[connection signal="timeout" from="Creature7/TaskTimer7" to="." method="_on_TaskTimer7_timeout"]
+
+[connection signal="timeout" from="Creature8/TaskTimer8" to="." method="_on_TaskTimer8_timeout"]
+
+[connection signal="timeout" from="Creature9/TaskTimer9" to="." method="_on_TaskTimer9_timeout"]
 
 

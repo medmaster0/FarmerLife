@@ -133,6 +133,76 @@ func farm_path_step():
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(3)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+		4:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(4)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+		5:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(5)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+		6:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(6)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+		7:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(7)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+		8:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(8)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+		9:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(9)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
+		10:
+			#Delete whatever tile is there and make a ploughed tile....
+			if map_tiles[map_coords.y*map_width + map_coords.x] != null:
+				map_tiles[map_coords.y*map_width + map_coords.x].queue_free()
+				map_tiles[map_coords.y*map_width + map_coords.x] = null
+			var temp_tile = FarmTile.instance()
+			temp_tile.position = position
+			get_parent().add_child(temp_tile)
+			temp_tile.change_tile(10)
+			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 	
 	if path.size() == 0:
 		return(true) #Do nothing since there are no more steps left
@@ -209,5 +279,51 @@ func change_job_type(type):
 			add_child(new_tool)
 			new_tool.change_tile(6)
 			personal_tool = new_tool
+		4:
+			#Rake
+			var new_tool = Tool.instance()
+			add_child(new_tool)
+			new_tool.change_tile(2)
+			personal_tool = new_tool
+			#The rake position requires creature to be flipped...
+			flip_sprites()
+		5:
+			#Rake
+			var new_tool = Tool.instance()
+			add_child(new_tool)
+			new_tool.change_tile(2)
+			personal_tool = new_tool
+			#The rake position requires creature to be flipped...
+			flip_sprites()
+		6:
+			#Shovel
+			var new_tool = Tool.instance()
+			add_child(new_tool)
+			new_tool.change_tile(4)
+			personal_tool = new_tool
+			#The rake position requires creature to be flipped...
+			flip_sprites()
+		7:
+			#Hoe
+			var new_tool = Tool.instance()
+			add_child(new_tool)
+			new_tool.change_tile(0)
+			personal_tool = new_tool
+			#The rake position requires creature to be flipped...
+			flip_sprites()
+		8:
+			#Scythe
+			var new_tool = Tool.instance()
+			add_child(new_tool)
+			new_tool.change_tile(3)
+			personal_tool = new_tool
+			#The rake position requires creature to be flipped...
+			#flip_sprites()
+		9:
+			#Nothing...
+			personal_tool = null
 	
 	print(type)
+
+
+#I just wanna say, fuck shit fuck you shit fuck fuck fuck fuck 

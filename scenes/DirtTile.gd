@@ -20,7 +20,7 @@ func _ready():
 	
 	#Choose a random dirt color
 	var dirt_color = dirt_colors[ randi() % dirt_colors.size() ]
-	#var dirt_color = MedAlgo.generate_skin_color()
+	#var dirt_color = MedAlgo.generate_dirt_color()
 	#^^^^^^ SKIN COLOR looks good for skin but not for dirt....
 	#^^^^TODO: but still wanna generate dirt colors somehow one day...
 	# The skin color a good start, but needs more Land of Enchantment reds swirled in there :)))

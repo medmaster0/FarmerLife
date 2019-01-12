@@ -18,6 +18,7 @@
 [node name="FrontTile" type="Node2D"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

@@ -85,6 +85,11 @@ func _ready():
 	$Creature2.change_job_type(1)
 	$Creature3.change_job_type(2)
 	$Creature4.change_job_type(3)
+	$Creature5.change_job_type(4)
+	$Creature6.change_job_type(5)
+	$Creature7.change_job_type(6)
+	$Creature8.change_job_type(7)
+	$Creature9.change_job_type(8)
 	
 	$Creature.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
 	#$Creature.flip_sprites()
@@ -114,4 +119,34 @@ func _on_TaskTimer3_timeout():
 func _on_TaskTimer4_timeout():
 	#After the time, start the second creature...
 	$Creature4.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
+	pass # replace with function body
+
+
+func _on_TaskTimer5_timeout():
+	#After the time, start the second creature...
+	$Creature5.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
+	pass # replace with function body
+
+
+func _on_TaskTimer6_timeout():
+	#After the time, start the second creature...
+	$Creature6.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
+	pass # replace with function body
+
+
+func _on_TaskTimer7_timeout():
+	#After the time, start the second creature...
+	$Creature7.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
+	pass # replace with function body
+
+
+func _on_TaskTimer8_timeout():
+	#After the time, start the second creature...
+	$Creature8.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
+	pass # replace with function body
+
+
+func _on_TaskTimer9_timeout():
+	#After the time, start the second creature...
+	$Creature9.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
 	pass # replace with function body

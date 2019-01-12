@@ -518,7 +518,6 @@ func generate_skin_color():
 #
 #This function used to make metallic/shiny color (like rose gold, silver gold, etc)
 #Was also used to make ground seem farther below (keep rising in air from color ground to pure white)
-
 func color_to_pastel(color):
 	
 	var low_grey = Color(0.75,0.75,0.75)
@@ -531,6 +530,31 @@ func color_to_pastel(color):
 	
 	var pastel_color = Color(r,g,b)
 	return(pastel_color)
+
+
+#Generate reddish browns for dirt
+#Basically a hack of generate skin color, but we add more red at the end...
+func generate_dirt_color():
+	
+	var r = rand_range(0.60,0.87)
+	var delta #The delta we subtract from r for g, and from g for b
+	if r < 0.78:
+		delta = rand_range(0.12,0.2)
+	else:
+		delta = rand_range(0.07,0.2)
+	var g = r - delta
+	var b = g - delta
+	
+	#***ALSO add more red
+	r = r + rand_range(0,0.13)
+	#Alo bllue
+	b = b + rand_range(0,0.09)
+	
+	var skin_color = Color(r,g,b)
+
+	
+
+	return(skin_color)
 
 #A collection of patterns and stuff made by me, MED
 
