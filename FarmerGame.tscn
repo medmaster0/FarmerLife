@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/DirtTile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Creature.tscn" type="PackedScene" id=4]
 
-[node name="FarmerGame" type="Node"]
+[node name="FarmerGame" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -44,7 +44,7 @@ position = Vector2( 416, 176 )
 [node name="TaskTimer2" type="Timer" parent="Creature2" index="2"]
 
 process_mode = 1
-wait_time = 7.0
+wait_time = 10.0
 one_shot = true
 autostart = true
 
@@ -55,7 +55,7 @@ position = Vector2( 496, 176 )
 [node name="TaskTimer3" type="Timer" parent="Creature3" index="2"]
 
 process_mode = 1
-wait_time = 14.0
+wait_time = 10.0
 one_shot = true
 autostart = true
 
@@ -66,7 +66,7 @@ position = Vector2( 576, 176 )
 [node name="TaskTimer4" type="Timer" parent="Creature4" index="2"]
 
 process_mode = 1
-wait_time = 21.0
+wait_time = 30.0
 one_shot = true
 autostart = true
 
@@ -77,7 +77,7 @@ position = Vector2( 448, 224 )
 [node name="TaskTimer5" type="Timer" parent="Creature5" index="2"]
 
 process_mode = 1
-wait_time = 28.0
+wait_time = 40.0
 one_shot = true
 autostart = true
 
@@ -88,7 +88,7 @@ position = Vector2( 544, 224 )
 [node name="TaskTimer6" type="Timer" parent="Creature6" index="2"]
 
 process_mode = 1
-wait_time = 35.0
+wait_time = 50.0
 one_shot = true
 autostart = true
 
@@ -99,7 +99,7 @@ position = Vector2( 448, 320 )
 [node name="TaskTimer7" type="Timer" parent="Creature7" index="2"]
 
 process_mode = 1
-wait_time = 42.0
+wait_time = 60.0
 one_shot = true
 autostart = true
 
@@ -110,7 +110,7 @@ position = Vector2( 544, 288 )
 [node name="TaskTimer8" type="Timer" parent="Creature8" index="2"]
 
 process_mode = 1
-wait_time = 49.0
+wait_time = 70.0
 one_shot = true
 autostart = true
 
@@ -121,7 +121,7 @@ position = Vector2( 640, 240 )
 [node name="TaskTimer9" type="Timer" parent="Creature9" index="2"]
 
 process_mode = 1
-wait_time = 56.0
+wait_time = 80.0
 one_shot = true
 autostart = true
 

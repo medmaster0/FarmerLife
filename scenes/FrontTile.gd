@@ -25,10 +25,15 @@ func _ready():
 func change_symbol(new_tile_index):
 	
 	#Turn off old one...
-	#var temp_color = get_child(tile_index).modulate #save the color
+	var temp_color = get_child(tile_index).modulate #save the color
 	get_child(tile_index).visible = false
 	
 	#Change to new one
 	tile_index = new_tile_index
 	get_child(tile_index).visible = true
-	#get_child(tile_index).modulate = temp_color
+	get_child(tile_index).modulate = temp_color
+	
+
+#function to change the color of the proper tile
+func change_color(color):
+	get_child(tile_index).modulate = color

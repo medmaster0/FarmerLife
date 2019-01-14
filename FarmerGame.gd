@@ -17,6 +17,8 @@ var cell_size #the amount of pixels in a cell/tile
 #Farming Vars
 var map_tiles = [] #keeps track of all the tiles in the map. access: [ypos*map_width + xpos]
 
+var soil_color #Keeps track of the tilled fields...
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -74,6 +76,8 @@ func _ready():
 			add_child(temp_tile)
 			map_tiles[j*map_width + i] = temp_tile
 	
+	soil_color = MedAlgo.generate_dirt_color() #Pick a random soil_color for uniformity...
+	
 	#Going to build a grid of different types of fields
 	
 	#print(MedAlgo.zig_zag_path(Vector2(1,1), 4,4))
@@ -90,6 +94,17 @@ func _ready():
 	$Creature7.change_job_type(6)
 	$Creature8.change_job_type(7)
 	$Creature9.change_job_type(8)
+	#Also register soil_color
+	$Creature.soil_color = soil_color
+	$Creature2.soil_color = soil_color
+	$Creature3.soil_color = soil_color
+	$Creature4.soil_color = soil_color
+	$Creature5.soil_color = soil_color
+	$Creature6.soil_color = soil_color
+	$Creature7.soil_color = soil_color
+	$Creature8.soil_color = soil_color
+	$Creature9.soil_color = soil_color
+	
 	
 	$Creature.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
 	#$Creature.flip_sprites()

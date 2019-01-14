@@ -18,6 +18,11 @@ func _ready():
 	# Initialization here
 	randomize()
 	
+	#Generate and change to new dirt pallete colors
+	dirt_colors[0] = MedAlgo.generate_dirt_color()
+	dirt_colors[1] = MedAlgo.generate_dirt_color()
+	dirt_colors[2] = MedAlgo.generate_dirt_color()
+	
 	#Choose a random dirt color
 	var dirt_color = dirt_colors[ randi() % dirt_colors.size() ]
 	#var dirt_color = MedAlgo.generate_dirt_color()

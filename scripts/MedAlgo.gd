@@ -309,7 +309,6 @@ func isVectorInSet(search_coords, search_set):
 #RETURNS MAP COORDS!
 #Nodes have form: (position, distance from target)
 func find_tile(global_start, target_tile, tile_map):
-	print("him momo")
 	
 	var walkable_tiles = [0,1,2,3,4]
 	

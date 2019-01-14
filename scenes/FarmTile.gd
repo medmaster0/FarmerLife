@@ -5,6 +5,7 @@ extends Node2D
 # var b = "textvar"
 
 var tile_index #the index of which child/tile is visible
+var dirt_color #the color of the sprites
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -15,6 +16,11 @@ func _ready():
 	
 	$BackTile.change_symbol(tile_index)
 	$FrontTile.change_symbol(tile_index)
+	
+	#Pick a random dirt color...
+	dirt_color = MedAlgo.generate_dirt_color()
+	$BackTile.change_color(dirt_color)
+	$FrontTile.change_color(dirt_color)
 	
 	pass
 
@@ -29,3 +35,9 @@ func change_tile(tile_index):
 	
 	$BackTile.change_symbol(tile_index)
 	$FrontTile.change_symbol(tile_index)
+	
+func change_color(dirt_color):
+	$BackTile.change_color(dirt_color)
+	$FrontTile.change_color(dirt_color)
+
+
