@@ -1,3 +1,4 @@
+
 extends Node
 
 #Caclulate the "opposite color"
@@ -567,6 +568,18 @@ func wet_dirt(dirt_brown):
 	
 	var wet_dirt_color = Color(r,g,b)
 	return(wet_dirt_color)
+
+
+#A function for generating water colors...
+#The colors should be between 75 and 200 ->> 0.29 and 0.78...
+#But, BLUE should be highest...
+func generate_water_color():
+	var b = rand_range(0.32,0.78)
+	var r = rand_range(0.3,b)
+	var g = rand_range(0.29,r)
+	var water_color = Color(r,g,b)
+	return(water_color)
+
 
 	
 #A function for generating a LATIN SQUARE

@@ -33,6 +33,8 @@ var job_id #keeps track of which stage and tool creature is performing
 
 #some wtf stuff...
 var soil_color #each *Creature* needs to keep track of soil color (since they create the new FarmTiles
+var wet_soil_color #and also wet soil...
+var water_color #and also water color...
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -50,6 +52,8 @@ func _ready():
 	
 	#SOIL BULLSHIT
 	soil_color = MedAlgo.generate_dirt_color()
+	wet_soil_color = MedAlgo.wet_dirt(soil_color)
+	water_color = MedAlgo.generate_water_color()
 	
 	pass
 
@@ -106,7 +110,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(0)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 		1:
 			#Delete whatever tile is there and make a ploughed tile....
@@ -117,7 +121,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(1)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 		2:
 			#Delete whatever tile is there and make a ploughed tile....
@@ -128,7 +132,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(2)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 		3:
 			#Delete whatever tile is there and make a ploughed tile....
@@ -139,7 +143,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(3)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 		4:
 			#Delete whatever tile is there and make a ploughed tile....
@@ -150,7 +154,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(4)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 		5:
 			#Delete whatever tile is there and make a ploughed tile....
@@ -161,7 +165,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(5)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 		6:
 			#Delete whatever tile is there and make a ploughed tile....
@@ -172,7 +176,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(6)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 		7:
 			#Delete whatever tile is there and make a ploughed tile....
@@ -183,7 +187,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(7)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 		8:
 			#Delete whatever tile is there and make a ploughed tile....
@@ -194,7 +198,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(8)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 		9:
 			#Delete whatever tile is there and make a ploughed tile....
@@ -205,7 +209,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(9)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 		10:
 			#Delete whatever tile is there and make a ploughed tile....
@@ -216,7 +220,7 @@ func farm_path_step():
 			temp_tile.position = position
 			get_parent().add_child(temp_tile)
 			temp_tile.change_tile(10)
-			temp_tile.change_color(soil_color)
+			temp_tile.change_color(soil_color,wet_soil_color,water_color)
 			map_tiles[map_coords.y*map_width + map_coords.x] = temp_tile
 	
 	if path.size() == 0:

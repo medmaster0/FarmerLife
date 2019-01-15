@@ -1,26 +1,40 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://scenes/FrontTile.gd" type="Script" id=1]
-[ext_resource path="res://tiles/tile1_front.png" type="Texture" id=2]
-[ext_resource path="res://tiles/tile2_front.png" type="Texture" id=3]
-[ext_resource path="res://tiles/tile3_front.png" type="Texture" id=4]
-[ext_resource path="res://tiles/tile4_front.png" type="Texture" id=5]
-[ext_resource path="res://tiles/tile5_front.png" type="Texture" id=6]
-[ext_resource path="res://tiles/tile6_front.png" type="Texture" id=7]
-[ext_resource path="res://tiles/tile7_front.png" type="Texture" id=8]
-[ext_resource path="res://tiles/tile8_front.png" type="Texture" id=9]
-[ext_resource path="res://tiles/tile9_front.png" type="Texture" id=10]
-[ext_resource path="res://tiles/tile10_front.png" type="Texture" id=11]
-[ext_resource path="res://tiles/tile11_front.png" type="Texture" id=12]
-[ext_resource path="res://tiles/tile12_front.png" type="Texture" id=13]
-[ext_resource path="res://tiles/tile13.png" type="Texture" id=14]
+[ext_resource path="res://tiles/dirt/tile1_frontPrim.png" type="Texture" id=2]
+[ext_resource path="res://tiles/dirt/tile2_frontPrim.png" type="Texture" id=3]
+[ext_resource path="res://tiles/dirt/tile3_frontPrim.png" type="Texture" id=4]
+[ext_resource path="res://tiles/dirt/tile4_frontPrim.png" type="Texture" id=5]
+[ext_resource path="res://tiles/dirt/tile5_frontPrim.png" type="Texture" id=6]
+[ext_resource path="res://tiles/dirt/tile6_frontPrim.png" type="Texture" id=7]
+[ext_resource path="res://tiles/dirt/tile7_frontPrim.png" type="Texture" id=8]
+[ext_resource path="res://tiles/dirt/tile8_frontPrim.png" type="Texture" id=9]
+[ext_resource path="res://tiles/dirt/tile9_frontPrim.png" type="Texture" id=10]
+[ext_resource path="res://tiles/dirt/tile10_frontPrim.png" type="Texture" id=11]
+[ext_resource path="res://tiles/dirt/tile11_frontPrim.png" type="Texture" id=12]
+[ext_resource path="res://tiles/dirt/tile12_frontPrim.png" type="Texture" id=13]
+[ext_resource path="res://tiles/dirt/blank.png" type="Texture" id=14]
+[ext_resource path="res://tiles/dirt/tile7_frontSeco.png" type="Texture" id=15]
+[ext_resource path="res://tiles/dirt/tile8_frontSeco.png" type="Texture" id=16]
+[ext_resource path="res://tiles/dirt/tile9_frontSeco.png" type="Texture" id=17]
+[ext_resource path="res://tiles/dirt/tile10_frontSeco.png" type="Texture" id=18]
+[ext_resource path="res://tiles/dirt/tile11_frontSeco.png" type="Texture" id=19]
+[ext_resource path="res://tiles/dirt/tile12_frontSeco.png" type="Texture" id=20]
+[ext_resource path="res://tiles/dirt/tile7_frontTert.png" type="Texture" id=21]
+[ext_resource path="res://tiles/dirt/tile8_frontTert.png" type="Texture" id=22]
+[ext_resource path="res://tiles/dirt/tile9_frontTert.png" type="Texture" id=23]
+[ext_resource path="res://tiles/dirt/tile10_frontTert.png" type="Texture" id=24]
+[ext_resource path="res://tiles/dirt/tile11_frontTert.png" type="Texture" id=25]
+[ext_resource path="res://tiles/dirt/tile12_frontTert.png" type="Texture" id=26]
 
-[node name="FrontTile" type="Node2D"]
+[node name="FrontTile" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Prim" type="Node2D" parent="." index="0"]
+
+[node name="Sprite" type="Sprite" parent="Prim" index="0"]
 
 visible = false
 z_index = 1
@@ -28,7 +42,7 @@ texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite2" type="Sprite" parent="." index="1"]
+[node name="Sprite2" type="Sprite" parent="Prim" index="1"]
 
 visible = false
 z_index = 1
@@ -36,7 +50,7 @@ texture = ExtResource( 3 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite3" type="Sprite" parent="." index="2"]
+[node name="Sprite3" type="Sprite" parent="Prim" index="2"]
 
 visible = false
 z_index = 1
@@ -44,7 +58,7 @@ texture = ExtResource( 4 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite4" type="Sprite" parent="." index="3"]
+[node name="Sprite4" type="Sprite" parent="Prim" index="3"]
 
 visible = false
 z_index = 1
@@ -52,7 +66,7 @@ texture = ExtResource( 5 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite5" type="Sprite" parent="." index="4"]
+[node name="Sprite5" type="Sprite" parent="Prim" index="4"]
 
 visible = false
 z_index = 1
@@ -60,7 +74,7 @@ texture = ExtResource( 6 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite6" type="Sprite" parent="." index="5"]
+[node name="Sprite6" type="Sprite" parent="Prim" index="5"]
 
 visible = false
 z_index = 1
@@ -68,7 +82,7 @@ texture = ExtResource( 7 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite7" type="Sprite" parent="." index="6"]
+[node name="Sprite7" type="Sprite" parent="Prim" index="6"]
 
 visible = false
 z_index = 1
@@ -76,7 +90,7 @@ texture = ExtResource( 8 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite8" type="Sprite" parent="." index="7"]
+[node name="Sprite8" type="Sprite" parent="Prim" index="7"]
 
 visible = false
 z_index = 1
@@ -84,7 +98,7 @@ texture = ExtResource( 9 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite9" type="Sprite" parent="." index="8"]
+[node name="Sprite9" type="Sprite" parent="Prim" index="8"]
 
 visible = false
 z_index = 1
@@ -92,7 +106,7 @@ texture = ExtResource( 10 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite10" type="Sprite" parent="." index="9"]
+[node name="Sprite10" type="Sprite" parent="Prim" index="9"]
 
 visible = false
 z_index = 1
@@ -100,7 +114,7 @@ texture = ExtResource( 11 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite11" type="Sprite" parent="." index="10"]
+[node name="Sprite11" type="Sprite" parent="Prim" index="10"]
 
 visible = false
 z_index = 1
@@ -108,7 +122,7 @@ texture = ExtResource( 12 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite12" type="Sprite" parent="." index="11"]
+[node name="Sprite12" type="Sprite" parent="Prim" index="11"]
 
 visible = false
 z_index = 1
@@ -116,7 +130,223 @@ texture = ExtResource( 13 )
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Sprite13" type="Sprite" parent="." index="12"]
+[node name="Sprite13" type="Sprite" parent="Prim" index="12"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Seco" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="Seco" index="0"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite2" type="Sprite" parent="Seco" index="1"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite3" type="Sprite" parent="Seco" index="2"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite4" type="Sprite" parent="Seco" index="3"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite5" type="Sprite" parent="Seco" index="4"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite6" type="Sprite" parent="Seco" index="5"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite7" type="Sprite" parent="Seco" index="6"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 15 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite8" type="Sprite" parent="Seco" index="7"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 16 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite9" type="Sprite" parent="Seco" index="8"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 17 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite10" type="Sprite" parent="Seco" index="9"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 18 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite11" type="Sprite" parent="Seco" index="10"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 19 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite12" type="Sprite" parent="Seco" index="11"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 20 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite13" type="Sprite" parent="Seco" index="12"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Tert" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="Tert" index="0"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite2" type="Sprite" parent="Tert" index="1"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite3" type="Sprite" parent="Tert" index="2"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite4" type="Sprite" parent="Tert" index="3"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite5" type="Sprite" parent="Tert" index="4"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite6" type="Sprite" parent="Tert" index="5"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite7" type="Sprite" parent="Tert" index="6"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 21 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite8" type="Sprite" parent="Tert" index="7"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 22 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite9" type="Sprite" parent="Tert" index="8"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 23 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite10" type="Sprite" parent="Tert" index="9"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 24 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite11" type="Sprite" parent="Tert" index="10"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 25 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite12" type="Sprite" parent="Tert" index="11"]
+
+visible = false
+z_index = 1
+texture = ExtResource( 26 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Sprite13" type="Sprite" parent="Tert" index="12"]
 
 visible = false
 z_index = 1

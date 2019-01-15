@@ -18,6 +18,8 @@ var cell_size #the amount of pixels in a cell/tile
 var map_tiles = [] #keeps track of all the tiles in the map. access: [ypos*map_width + xpos]
 
 var soil_color #Keeps track of the tilled fields...
+var wet_soil_color
+var water_color
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -77,6 +79,8 @@ func _ready():
 			map_tiles[j*map_width + i] = temp_tile
 	
 	soil_color = MedAlgo.generate_dirt_color() #Pick a random soil_color for uniformity...
+	wet_soil_color = MedAlgo.wet_dirt(soil_color)
+	water_color = MedAlgo.generate_water_color()
 	
 	#Going to build a grid of different types of fields
 	
@@ -104,7 +108,26 @@ func _ready():
 	$Creature7.soil_color = soil_color
 	$Creature8.soil_color = soil_color
 	$Creature9.soil_color = soil_color
-	
+	#Also register wet_soil 
+	$Creature.wet_soil_color = wet_soil_color
+	$Creature2.wet_soil_color = wet_soil_color
+	$Creature3.wet_soil_color = wet_soil_color
+	$Creature4.wet_soil_color = wet_soil_color
+	$Creature5.wet_soil_color = wet_soil_color
+	$Creature6.wet_soil_color = wet_soil_color
+	$Creature7.wet_soil_color = wet_soil_color
+	$Creature8.wet_soil_color = wet_soil_color
+	$Creature9.wet_soil_color = wet_soil_color	
+	#Also register water color...
+	$Creature.water_color = water_color
+	$Creature2.water_color = water_color
+	$Creature3.water_color = water_color
+	$Creature4.water_color = water_color
+	$Creature5.water_color = water_color
+	$Creature6.water_color = water_color
+	$Creature7.water_color = water_color
+	$Creature8.water_color = water_color
+	$Creature9.water_color = Color(randf(), randf(), randf())	
 	
 	$Creature.path = MedAlgo.zig_zag_path(Vector2(1,1), 20,20)
 	#$Creature.flip_sprites()
