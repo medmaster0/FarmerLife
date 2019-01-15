@@ -557,6 +557,17 @@ func generate_dirt_color():
 
 #A collection of patterns and stuff made by me, MED
 
+#Make a dirt color look wet
+#Subtract the following constants from r,g,b:
+#respectively: 0.04, 0.16, 0.22
+func wet_dirt(dirt_brown):
+	var r = dirt_brown.r - 0.04
+	var g = dirt_brown.g - 0.16
+	var b = dirt_brown.b - 0.22
+	
+	var wet_dirt_color = Color(r,g,b)
+	return(wet_dirt_color)
+
 	
 #A function for generating a LATIN SQUARE
 #Based on the input of a string

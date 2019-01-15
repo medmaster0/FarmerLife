@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/DirtTile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Creature.tscn" type="PackedScene" id=4]
 
-[node name="FarmerGame" type="Node" index="0"]
+[node name="FarmerGame" type="Node"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -55,7 +55,7 @@ position = Vector2( 496, 176 )
 [node name="TaskTimer3" type="Timer" parent="Creature3" index="2"]
 
 process_mode = 1
-wait_time = 10.0
+wait_time = 20.0
 one_shot = true
 autostart = true
 
